@@ -7,11 +7,15 @@ const Map = ({eventData, centerPoint, zoomLevel}) => {
 
     const[locationInfo, setLocationInfo] = useState(null)
 
+    const handleClick = (id, title) =>{
+        setLocationInfo({id: id, title: title});
+    }
+
     const markers = eventData.map((curr) =>{
         if(curr.categories[0].id === 8){
             const lat = curr.geometries[0].coordinates[1];
             const lng = curr.geometries[0].coordinates[0];
-            return <LocationMarker lat={lat} lng={lng} />
+            return <LocationMarker lat={lat} lng={lng} onClick={() => handleClick(curr.id, curr.title )}/>
         }
     })
 
@@ -24,6 +28,7 @@ const Map = ({eventData, centerPoint, zoomLevel}) => {
             >
                 {markers}
             </GoogleMapReact>
+            {locationInfo && <InfoBox info={locationInfo}/>}
         </div>
     )
 }
