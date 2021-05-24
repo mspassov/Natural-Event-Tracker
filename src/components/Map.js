@@ -9,6 +9,8 @@ const Map = ({eventData, centerPoint, zoomLevel}) => {
 
     const handleClick = (id, title) =>{
         setLocationInfo({id: id, title: title});
+        let box = document.querySelector('.location-info');
+        box.style.display = 'block';
     }
 
     const markers = eventData.map((curr) =>{
