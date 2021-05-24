@@ -8,6 +8,7 @@ const InfoBox = ({info}) => {
                 <li>ID: <strong>{info.id}</strong></li>
                 <li>TITLE: <strong>{info.title}</strong></li>
             </ul>
+            <button>Close</button>
         </div>
     )
 }
