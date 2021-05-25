@@ -3,7 +3,8 @@ import React from 'react'
 const Header = () => {
     return (
         <header>
-            <h2>Natural Events Tracker (Powered by NASA)</h2>
+            <p className="title">Natural Events Tracker (Powered by NASA)</p>
+            <p>Click on any event to get details!</p>
         </header>
     )
 }

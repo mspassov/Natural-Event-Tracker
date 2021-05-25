@@ -78,6 +78,17 @@ header{
   font-size: 1rem;
 }
 
+header .title{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+
+header p{
+  margin-bottom: 10px;
+}
+
 button{
   border: none;
   color: white;
@@ -89,4 +100,23 @@ button{
 
 button:hover{
   background: red;
+}
+
+.explanation{
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.nasaLogo{
+  width: 100px;
+  height: auto;
+}
+
+.mapsLogo{
+  width: 80px;
+  height: auto;
+}
+
+.explanation h1{
+  font-size: 36px;
 }
